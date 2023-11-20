@@ -1,0 +1,67 @@
+/* PRESETS */
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Young+Serif&display=swap');
+
+
+
+/* STRUCTURE */
+#content {
+    border: 2px solid green;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.header, .main, .footer {
+    border: 2px solid blue;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.section {
+    flex: 1;
+    border: 2px solid;
+}
+body {background-image: url(background.jpg);}
+
+.header, .footer {
+    height: 12vh;
+}
+
+.header {
+    display: flex;
+}
+
+.navbar {
+    border: 2px solid pink;
+    flex: 1;
+    display: flex;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Young Serif', serif;
+    font-weight: 900;
+    color: #C3073F;
+    font-size: 2em;
+    border: 2px solid pink;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarContainer {
+    flex: 1;
+    border: 2px solid yellow;
+}
+
+.menuContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+}
