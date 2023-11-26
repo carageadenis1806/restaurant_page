@@ -1,67 +1,622 @@
 /* PRESETS */
 @import 'reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Manrope:wght@600&family=Young+Serif&display=swap');
 
 
-
-/* STRUCTURE */
+/* MAIN STRUCTURE */
 #content {
-    border: 2px solid green;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-}
-
-.header, .main, .footer {
-    border: 2px solid blue;
 }
 
 .main {
     flex: 1;
     display: flex;
     flex-direction: column;
+    background-color: #d5eeff;
 }
 .section {
     flex: 1;
-    border: 2px solid;
-}
-body {background-image: url(background.jpg);}
-
-.header, .footer {
-    height: 12vh;
-}
-
-.header {
-    display: flex;
-}
-
-.navbar {
-    border: 2px solid pink;
-    flex: 1;
-    display: flex;
-}
-
-.title {
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Young Serif', serif;
-    font-weight: 900;
-    color: #C3073F;
-    font-size: 2em;
-    border: 2px solid pink;
-    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navbarContainer {
-    flex: 1;
-    border: 2px solid yellow;
+.header, .footer {
+    height: 12vh;
+    background-color: #ff895d;
 }
 
+/* header */ 
+.header {
+    display: flex;
+    position: relative;	box-shadow: 0px 2px 3px 0px #1E1E1E;
+}
+
+.navbar {
+    flex: 1;
+    display: flex;
+}
+
+.title {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #d5eeff;
+    text-shadow: 5px 5px 0px #007cb9, 
+      10px 10px 0px #005689, 
+      15px 15px 0px  #6868AC, 
+      20px 20px 0px #263849;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.navbarContainer {
+    flex: 1;
+    border-left: 4px solid #d5eeff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+/* footer */
+.footer {
+    position: relative;	box-shadow: 0px -2px 3px 0px #1E1E1E;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footerText {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #d5eeff;
+    padding: 1em;
+    border: 1px solid #d5eeff;
+}
+
+
+
+
+/* HOME TAB */
+.mottoContainer {
+    border: 2px solid;
+    height: 55vh;
+    width: 70%;
+    display: flex;
+    position: relative;
+    box-shadow: 0px 0px 5px 0px #000000;
+}
+
+.rightContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/burgerB.png);
+    background-size: 100%;
+}
+
+.leftContainer {
+    width: 60%;
+    background-image: url(./img/burger.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.motto {
+    border: 2px solid;
+    padding: 2em;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #ff895d;
+}
+
+
+
+/* MENU TAB */
 .menuContent {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr, 1fr;
     grid-auto-rows: 1fr;
+    height: 70vh;
+    width: 100vh;
+    gap: 10em;
+    justify-content: center;
+    align-items: center;
+}
+.menuItem {
+    position: relative;
+    border: 2px solid;
+    height: 20em;
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItemText {
+    display: none;
+}
+
+/* menu images */
+.menuImage {
+    height: 100%;
+    border: 2px solid;
+}
+
+#sandwichImg {
+    background-image: url(./menuImgs/sandwichImg.jpg);
+    background-size: 140%;
+}
+
+#burgerImg {
+    background-image: url(./menuImgs/burgerImg.jpg);
+    background-size: 100%;
+}
+
+#saladImg {
+    background-image: url(./menuImgs/saladImg.jpg);
+    background-size: 120%;
+}
+
+#pizzaImg {
+    background-image: url(./menuImgs/pizzaImg.jpg);
+    background-size: 120%;
+}
+
+#pastaImg {
+    background-image: url(./menuImgs/pastaImg.jpg);
+    background-size: 120%;
+}
+
+#pancakesImg {
+    background-image: url(./menuImgs/pancakesImg.jpg);
+    background-size: 120%;
+}
+
+
+/* new grids after pressing the details button */
+        .newGrid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr, 1fr;
+            grid-auto-rows: 1fr;
+            height: 70vh;
+            width: 100vh;
+            gap: 10em;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .newGridItems {
+            border: 2px solid;
+            height: 20em;
+            width: 25em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Josefin Sans', 'Manrope', 'Young Serif', sans-serif;
+            letter-spacing: 3px;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-shadow: #000;
+            padding-left: 3px;
+            padding-right: 3px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+
+
+
+/* CONTACT TAB */
+.contactContent {
+    height: 50vh;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContainer {
+    text-align: center;
+    padding: 10px;
+    height: 30vh;
+    width: 50%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #ff895d;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social {
+    height: 50px;
+    width: 50px
+}
+
+.phone, .address{
+    font-size: 15px;
+}
+
+#tiktok {
+    background-image: url(./social/tiktok.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#facebook {
+    background-image: url(./social/facebook.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#instagram {
+    background-image: url(./social/instagram.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+/* BUTTONS */
+button.idButton {
+    position: absolute;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-color: #d5eeff;
+}
+
+button.homeButton:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+button.menuButton:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+button.contactButton:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+button.idButton:active {
+    box-shadow: 0px 0px 0px 0px;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+/* ADDING RESPONSIVNESS (testing done on iPhone 12 Pro) */
+
+@media (max-width: 400px) {
+    .footer {
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+    }
+
+    /* HOME */
+   .title {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #d5eeff;
+    text-shadow: 2px 2px 0px #007cb9, 
+      5px 5px 0px #005689;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    padding-top: 10px;
+   }
+
+   .navbar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 10px;
+   }
+
+   .navbarContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+    button {
+        font-family: "Open Sans", sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        cursor: pointer;
+        border: 1px solid;
+        padding: 0.17em 0.25em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 2px 2px 0px 0px, 4px 4px 0px 0px, 3px 3px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        background-color: #d5eeff;
+    }
+
+    .mottoContainer {
+        border: 2px solid;
+        height: 55vh;
+        width: 70%;
+        display: flex;
+        position: relative;
+        box-shadow: 0px 0px 5px 0px #000000;
+    }
+    
+    .rightContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./img/burgerB.png);
+        background-size: 100%;
+    }
+    
+    .leftContainer {
+       display: none;
+    }
+    
+    .motto {
+        border: 2px solid;
+        padding: 1em;
+        margin: 1em;
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        background-color: #ff895d;
+    }
+
+
+
+
+    /* MENU */
+    .menuContent {
+        height: auto;
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+    .menuItem {
+        border: 2px solid;
+        height: 300px;
+        width: 70%;
+      
+    }
+    
+    .menuItemText {
+        display: none;
+    }
+    
+    #sandwichImg {
+        background-image: url(./menuImgs/sandwichImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    #burgerImg {
+        background-image: url(./menuImgs/burgerImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    #saladImg {
+        background-image: url(./menuImgs/saladImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    #pizzaImg {
+        background-image: url(./menuImgs/pizzaImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    #pastaImg {
+        background-image: url(./menuImgs/pastaImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    #pancakesImg {
+        background-image: url(./menuImgs/pancakesImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    
+    /* new grids after pressing the details button */
+            .newGrid {
+                height: auto;
+                display: flex;
+                gap: 2em;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 10px;
+            }
+    
+            .newGridItems {
+                border: 2px solid;
+                height: 300px;
+                width: 70%;
+                font-family: 'Josefin Sans', 'Manrope', 'Young Serif', sans-serif;
+                letter-spacing: 1px;
+                font-size: 10px;
+                text-transform: uppercase;
+                text-shadow: #000;
+                padding-left: 1.5px;
+                padding-right: 1.5px;
+                text-align: center;
+                line-height: 10px;
+            }
+
+
+    /* CONTACT TAB */
+.contactContent {
+    height: 60vh;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContainer {
+    text-align: center;
+    padding: 10px;
+    height: 40vh;
+    width: 70%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #ff895d;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social {
+    height: 50px;
+    width: 50px
+}
+
+.phone, .address{
+    font-size: 15px;
+}
+
+#tiktok {
+    background-image: url(./social/tiktok.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#facebook {
+    background-image: url(./social/facebook.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#instagram {
+    background-image: url(./social/instagram.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 }
